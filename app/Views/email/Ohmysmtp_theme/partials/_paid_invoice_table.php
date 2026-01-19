@@ -1,0 +1,20 @@
+<table class="table table-striped">
+    <tbody>
+        <tr>
+            <td><strong><?=lang('Site.total_paid')?></strong></td>
+            <td><?=formatMoney($invoice['total_paid'])?></td>
+        </tr>
+        <tr>
+            <td><strong><?=lang('Site.payment_method')?></strong></td>
+            <td><?=$invoice['payment_method']?></td>
+        </tr>
+        <tr>
+            <td><strong><?=lang('Site.payment_reference')?></strong></td>
+            <td><?=$invoice['payment_reference']?></td>
+        </tr>
+        <tr>
+            <td><strong><?=lang('Site.payment_status')?></strong></td>
+            <td><?=lang('Site.'.$invoice['status'])?></td>
+        </tr>
+    </tbody>
+</table>

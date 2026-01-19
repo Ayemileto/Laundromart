@@ -1,0 +1,117 @@
+body {
+    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* NAV */
+.nav-link {
+    font-weight: 500;
+    color: black;
+}
+
+/* CAROUSEL */
+.carousel-inner {
+    max-height: 37rem!important;
+}
+
+.carousel-item {
+    max-height: inherit;
+}
+.carousel-item img {
+    max-height: inherit!important;
+}
+
+/* CAROUSEL CONTENT */
+.carousel-caption {
+    position: absolute;
+    top: 54%;
+    transform: translateY(-50%);
+}
+
+/* COLUMNS */
+.column-section h2 {
+    font-weight: 700;
+    color: black;
+}
+
+.column-section h4 {
+    font-weight: 600;
+    color: black;
+}
+
+.column-section img {
+    height: 15rem!important;
+}
+
+.column-section p {
+    color: black;
+    font-weight: 500;
+}
+
+/* LEAD */
+.lead {
+    font-weight: 700;
+}
+
+.lead a {
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* .lead a:hover {
+    text-decoration: none;
+    font-weight: 500;
+} */
+/*  */
+.lead a:hover {
+    background-color: white;
+    border-color: white;
+    color: #3cb46e!important;
+}
+
+/* SUBSCRIPTION PLANS */
+.plan-features {
+    line-height: 2rem;
+}
+
+/* FOOTER */
+footer .container,
+footer .container-fluid
+{
+    background-color: #343a40!important;
+}
+
+footer .text-light,
+footer p,
+footer a
+{
+    color: #dee2e6!important;
+}
+
+footer li {
+    line-height: 1.6rem;
+    font-weight: 500;
+    font-size: 0.8rem;
+
+}
+
+.copyright {
+    background-color: #212529;
+}
+
+.hide {
+    display: none;
+    visibility: hidden;
+}
+
+.wrapper {
+    min-height:300px;
+}
+
+@media screen and (max-width: 768px) {
+    .carousel-caption {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}

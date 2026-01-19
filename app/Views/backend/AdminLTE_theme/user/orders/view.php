@@ -1,0 +1,156 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th><?=lang('Site.product_name')?></th>
+                        <th><?=lang('Site.service_name')?></th>
+                        <th><?=lang('Site.quantity')?></th>
+                        <th><?=lang('Site.unit_price')?></th>
+                        <th><?=lang('Site.total_price')?></th>
+                    </tr>
+                </thead>
+                <tbody>
+<?php
+    foreach($order_details as $detail)
+    {
+?>
+                    <tr>
+                        <td><?=$detail['product_name']?></td>
+                        <td><?=$detail['product_service_name']?></td>
+                        <td><?=$detail['quantity']?></td>
+                        <td><?=$detail['unit_price']?></td>
+                        <td><?=$detail['total_price']?></td>
+                    </tr>
+<?php
+    }
+?>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+<?php
+    if(!empty($custom_items))
+    {
+?>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th><?=lang('Site.name')?></th>
+                                <th><?=lang('Site.price')?></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+<?php
+        foreach($custom_items as $item)
+        {
+?>
+                            <tr>
+                                <td><?=$item['name']?></td>
+                                <td><?=formatMoney($item['price'])?></td>
+                            </tr>
+<?php
+        }
+?>        
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+<?php
+    }
+    if(!empty($shipping_details))
+    {
+?>
+        <div class="col-12">
+            <h2><?=lang('Site.shipping_details')?></h2>
+            <table class="table table-striped">
+                <tbody>
+                    <tr>
+                        <td><?=lang('Site.shipping_type')?></td>
+                        <td><?=lang('Site.'.$shipping_details['shipping_type'])?></td>
+                    </tr>
+                    <tr>
+                        <td><?=lang('Auth.firstname')?></td>
+                        <td><?=$shipping_details['firstname']?></td>
+                    </tr>
+                    <tr>
+                        <td><?=lang('Auth.lastname')?></td>
+                        <td><?=$shipping_details['lastname']?></td>
+                    </tr>
+                    <tr>
+                        <td><?=lang('Site.address')?></td>
+                        <td><?=$shipping_details['address']?></td>
+                    </tr>
+                    <tr>
+                        <td><?=lang('Site.address2')?></td>
+                        <td><?=$shipping_details['address2']?></td>
+                    </tr>
+    <?php
+        if(!empty($location_details))
+        {
+    ?>
+                    <tr>
+                        <td><?=lang('Site.zipcode')?></td>
+                        <td><?=$location_details['zipcode']?> (<?=$location_details['name']?>)</td>
+                    </tr>
+    <?php
+        }
+    ?>
+                    <tr>
+                        <td><?=lang('Site.pickup_date')?></td>
+                        <td><?=formatDate($shipping_details['pickup_date'])?></td>
+                    </tr>
+                    <tr>
+                        <td><?=lang('Site.pickup_time')?></td>
+                        <td><?=formatTime($shipping_details['pickup_time'])?></td>
+                    </tr>
+                    <tr>
+                        <td><?=lang('Site.delivery_date')?></td>
+                        <td><?=formatDate($shipping_details['delivery_date'])?></td>
+                    </tr>
+                    <tr>
+                        <td><?=lang('Site.delivery_time')?></td>
+                        <td><?=formatTime($shipping_details['delivery_time'])?></td>
+                    </tr>
+                    <tr>
+                        <td><?=lang('Site.pickup_status')?></td>
+                        <td><?=lang('Site.'.$shipping_details['pickup_status'])?></td>
+                    </tr>
+                    <tr>
+                        <td><?=lang('Site.pickup_message')?></td>
+                        <td><?=$shipping_details['pickup_message']?></td>
+                    </tr>
+                    <tr>
+                        <td><?=lang('Site.delivery_status')?></td>
+                        <td><?=lang('Site.'.$shipping_details['delivery_status'])?></td>
+                    </tr>
+                    <tr>
+                        <td><?=lang('Site.delivery_message')?></td>
+                        <td><?=$shipping_details['delivery_message']?></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+<?php
+    }
+?>
+    </div>
+</div>
+

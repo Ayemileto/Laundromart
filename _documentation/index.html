@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Laundromart | Blank Page</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/plugins/fontawesome-free/css/all.min.css">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="assets/css/adminlte.min.css">
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+</head>
+
+<body class="hold-transition sidebar-mini">
+    <!-- Site wrapper -->
+    <div class="wrapper">
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li>
+            </ul>
+
+            <!-- SEARCH FORM -->
+            <form class="form-inline ml-3">
+                <div class="input-group input-group-sm">
+                    <input class="form-control form-control-navbar" type="search" placeholder="Search"
+                        aria-label="Search">
+                    <div class="input-group-append">
+                        <button class="btn btn-navbar" type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </nav>
+        <!-- /.navbar -->
+
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
+            <a href="index.html" class="brand-link">
+                <img src="assets/img/logo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+                    style="opacity: .8">
+                <span class="brand-text font-weight-light">Laundromart</span>
+            </a>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                        data-accordion="false">
+                        <li class="nav-item">
+                            <a href="/" class="nav-link active">
+                                <i class="nav-icon fas fa-microchip"></i>
+                                <p>
+                                    Installation
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="appearance.html" class="nav-link">
+                                <i class="nav-icon fas fa-cog"></i>
+                                <p>
+                                    Website Appearance
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="email-setup.html" class="nav-link">
+                                <i class="nav-icon fas fa-envelope"></i>
+                                <p>
+                                    Email Setup
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="payment-gateways.html" class="nav-link">
+                                <i class="nav-icon fas fa-credit-card"></i>
+                                <p>
+                                    Setup Payment Gateway
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="create-staff.html" class="nav-link">
+                                <i class="nav-icon fas fa-users"></i>
+                                <p>
+                                    Create Staff
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="locations.html" class="nav-link">
+                                <i class="nav-icon fas fa-map"></i>
+                                <p>
+                                    Setup Locations
+                                </p>
+                            </a>
+                        </li>
+
+                        <li class="nav-header">MISCELLANEOUS</li>
+                        <li class="nav-item">
+                            <a href="https://demo.gbams.dev/laundromart/_documentation" class="nav-link">
+                                <i class="nav-icon fas fa-file"></i>
+                                <p>Online Documentation</p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper px-4 py-2">
+            <!-- Main content -->
+            <div class="content-header">
+                <!-- <h1 class="text-dark">Basic Setup and Configuration</h1> -->
+                <h1 class="text-dark">Server Requirements</h1>
+            </div>
+            <div class="content px-2">
+                <p>Laundromart was developed using CodeIgniter 4.1.3. It requires a minimum PHP version of 7.2.</p>
+            </div>
+            <div class="content-header">
+                <h1 class="text-dark">Installation</h1>
+            </div>
+            <div class="content px-2">
+                <p>Laundromart can be installed using 2 methods. choose your favorite method from the list below.</p>
+
+                <h4>One - Click Installer:</h4>
+                <ul>
+                    <li>Extract the files to your server</li>
+                    <li>Visit your domain/install. for example, http://example.com/install</li>
+                    <li>Fill in the appropriate data into your form to complete the installation</li>
+                    <li>Once installation is completed, Delete the installer folder in app\controllers\installer. this
+                        is neccessary for security purposes.</li>
+                </ul>
+
+                <h4>Manual Installation</h4>
+                <em>This requires you to have command line access</em>
+                <ul>
+                    <li>Extract the files to your server</li>
+                    <li>Open .env file in your root folder
+                        <ul>
+                            <li>Set your website Url (line 23)</li>
+                            <li>Set your TimeZone (line 24)</li>
+                            <li>To force all connection through https, uncomment and set app.forceGlobalSecureRequests
+                                to true (line 26)</li>
+                            <li>Set your database connection details (line 42 - 46)</li>
+                            <li>set your encryption key (line 96)</li>
+                            <li>set installer.finish to true (line 133)</li>
+                        </ul>
+                    </li>
+                    <li>Open Command prompt in your root folder and run the following commands
+                        <ul>
+                            <li>
+                                <code>php spark migrate</code>
+                                - this command creates all the neccessary database tables
+                            </li>
+                            <li>
+                                <code>php spark db:seed AppSettingsSeed</code>
+                                - this command creates all the neccessary settings data
+                            </li>
+                            <li>
+                                <code>php spark db:seed PaymentGatewaySeed</code>
+                                - this command creates all the neccessary setup data for payment gateways
+                            </li>
+                            <li>
+                                <code>php spark db:seed PermissionSeed</code>
+                                - this command creates all the neccessary setup data for roles - permission system
+                            </li>
+                            <h6 class="text-uppercase mt-3">The following commands are optional</h6>
+                            <li>
+                                <code>php spark db:seed SuperAdminSeed</code>
+                                - This command creates the <strong>SuperAdmin</strong>. the default login data is
+                                <em>superadmin@admin.com; 123456789</em>
+                                <br> You should change this default login before running this command, head over to
+                                App\Database\Seeds\SuperAdminSeed.php to do so.
+                            </li>
+                            <li>
+                                <code>php spark db:seed UserSeed</code>
+                                - This command <strong>generates 10 random user</strong>. the default password for
+                                generated users is <em>123456789</em>
+                                <br> To change the number of users generated or the default password, head over to
+                                App\Database\Seeds\UserSeed.php to do so before running the command.
+                            </li>
+                            <li>
+                                <code>php spark db:seed PagesSeed</code>
+                                - this command creates default pages like About Us, Privacy Policy and Terms and
+                                Conditions. The pages can be edited from Admin Dashboard Later.
+                            </li>
+                            <li>
+                                <code>php spark db:seed PlansSeed</code>
+                                - This command creates some preset Subscription Plans. The Plans can be updated from
+                                Admin Dashboard.
+                            </li>
+                            <li>
+                                <code>php spark db:seed ProductsSeed</code><br>
+                                <code>php spark db:seed ProductsServicesSeed</code><br>
+                                <code>php spark db:seed ProductsServicesPricesSeed</code><br>
+                                - This three commands creates some preset Products, Product Services, and Pricing for
+                                each product-service combination.
+                                <br>They are dependent on data from each other and they should be run in the order in
+                                which they apper here.
+                            </li>
+                            <li>Once installation is completd, Delete the installer folder in app\controllers\installer.
+                                this is neccessary for security purposes.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <h4>Congratulations, Your installation have been completed!!!</h4>
+                <em><strong>Now head over to your new platform.</strong></em>
+            </div>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+        <footer class="main-footer">
+
+        </footer>
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- jQuery -->
+    <script src="assets/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="assets/js/adminlte.min.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="../../dist/js/demo.js"></script>
+</body>
+
+</html>
